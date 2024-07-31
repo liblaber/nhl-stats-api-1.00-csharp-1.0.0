@@ -27,9 +27,9 @@ Retrieve component season information.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Season.GetComponentSeasonAsync("lang");
 
@@ -56,9 +56,9 @@ Retrieve season information.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Season.GetSeasonInformationAsync("lang");
 

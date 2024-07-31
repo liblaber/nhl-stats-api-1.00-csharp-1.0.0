@@ -28,9 +28,9 @@ Retrieve list of all teams.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Teams.GetTeamInformationAsync("lang");
 
@@ -68,9 +68,9 @@ Retrieve team stats for a specific report.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Teams.GetTeamStatsAsync("report", "lang", false, false, "factCayenneExp", "include", "exclude", "cayenneExp", "sort", "dir", 8, 1);
 
@@ -97,9 +97,9 @@ Retrieve list of all franchises.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Teams.GetFranchiseInformationAsync("lang");
 
