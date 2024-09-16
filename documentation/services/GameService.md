@@ -27,9 +27,9 @@ Retrieve game information.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Game.GetGameInformationAsync("lang");
 
@@ -56,9 +56,9 @@ Retrieve metadata for game.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Game.GetGameMetadataAsync("lang");
 

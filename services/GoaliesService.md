@@ -29,9 +29,9 @@ Retrieve goalie leaders for a specific attribute.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Goalies.GetGoalieLeadersAsync("attribute", "lang");
 
@@ -69,9 +69,9 @@ Retrieve goalie stats for a specific report.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Goalies.GetGoalieStatsAsync("report", "lang", "cayenneExp", false, true, "factCayenneExp", "include", "exclude", "sort", "dir", 2, 3);
 
@@ -98,9 +98,9 @@ Retrieve goalie milestones.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Goalies.GetGoalieMilestonesAsync("lang");
 

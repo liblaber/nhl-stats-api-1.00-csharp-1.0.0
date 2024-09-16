@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="../NhlStats/NhlStats.csproj" />
+    <ProjectReference Include="../NhlStatsClient/NhlStatsClient.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -3,9 +3,9 @@
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
-using NhlStats.Http.Serialization;
+using NhlStatsClient.Http.Serialization;
 
-namespace NhlStats.Http;
+namespace NhlStatsClient.Http;
 
 /// <summary>
 /// A builder for creating <see cref="HttpRequestMessage"/> instances with full support for serialization.

@@ -26,9 +26,9 @@ Retrieve player information. Currently seems to return a truncated list with a t
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Players.GetPlayerInformationAsync("lang");
 

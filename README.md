@@ -1,6 +1,6 @@
-# NhlStats C# SDK 1.0.0
+# NhlStatsClient C# SDK 1.0.0
 
-Welcome to the NhlStats SDK documentation. This guide will help you get started with integrating and using the NhlStats SDK in your project.
+Welcome to the NhlStatsClient SDK documentation. This guide will help you get started with integrating and using the NhlStatsClient SDK in your project.
 
 ## Versions
 
@@ -32,7 +32,7 @@ This SDK is compatible with the following versions: `C# >= .NET 6`
 To get started with the SDK, we recommend installing using `nuget`:
 
 ```bash
-dotnet add package NhlStats
+dotnet add package NhlStatsClient
 ```
 
 # Sample Usage
@@ -40,16 +40,16 @@ dotnet add package NhlStats
 Below is a comprehensive example demonstrating how to authenticate and call a simple endpoint:
 
 ```cs
-using NhlStats;
-using NhlStats.Config;
-using Environment = NhlStats.Http.Environment;
+using NhlStatsClient;
+using NhlStatsClient.Config;
+using Environment = NhlStatsClient.Http.Environment;
 
-var config = new NhlStatsConfig
+var config = new NhlStatsClientConfig
 {
   Environment = Environment.Default
 };
 
-var client = new NhlStatsClient(config);
+var client = new NhlStatsClientClient(config);
 
 var response = await client.Miscellaneous.PingServerAsync();
 

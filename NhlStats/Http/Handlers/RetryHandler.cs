@@ -4,7 +4,7 @@ using System.Net;
 using Polly;
 using Polly.Retry;
 
-namespace NhlStats.Http.Handlers;
+namespace NhlStatsClient.Http.Handlers;
 
 /// <summary>
 /// A handler for retrying requests when they fail.
