@@ -1,0 +1,207 @@
+# MiscellaneousService
+
+A list of all methods in the `MiscellaneousService` service. Click on the method name to view detailed information about that method.
+
+| Methods                                                         | Description                                                                           |
+| :-------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
+| [GetConfigurationAsync](#getconfigurationasync)                 | Retrieve configuration information.                                                   |
+| [PingServerAsync](#pingserverasync)                             | Ping the server to check connectivity.                                                |
+| [GetCountryInformationAsync](#getcountryinformationasync)       | Retrieve country information. Returns list of all countries with a hockey presence(?) |
+| [GetShiftChartsAsync](#getshiftchartsasync)                     | Retrieve shift charts for a specific game.                                            |
+| [GetGlossaryAsync](#getglossaryasync)                           | Retrieve the glossary for a specific language.                                        |
+| [GetContentModuleAsync](#getcontentmoduleasync)                 | Retrieve content module information.                                                  |
+| [GetContentModuleMetadataAsync](#getcontentmodulemetadataasync) | Retrieve metadata for content modules.                                                |
+
+## GetConfigurationAsync
+
+Retrieve configuration information.
+
+- HTTP Method: `GET`
+- Endpoint: `/{lang}/config`
+
+**Parameters**
+
+| Name | Type   | Required | Description   |
+| :--- | :----- | :------- | :------------ |
+| lang | string | ✅       | Language code |
+
+**Return Type**
+
+`object`
+
+**Example Usage Code Snippet**
+
+```csharp
+using NhlStats;
+
+var client = new NhlStatsClient();
+
+var response = await client.Miscellaneous.GetConfigurationAsync("lang");
+
+Console.WriteLine(response);
+```
+
+## PingServerAsync
+
+Ping the server to check connectivity.
+
+- HTTP Method: `GET`
+- Endpoint: `/ping`
+
+**Return Type**
+
+`object`
+
+**Example Usage Code Snippet**
+
+```csharp
+using NhlStats;
+
+var client = new NhlStatsClient();
+
+var response = await client.Miscellaneous.PingServerAsync();
+
+Console.WriteLine(response);
+```
+
+## GetCountryInformationAsync
+
+Retrieve country information. Returns list of all countries with a hockey presence(?)
+
+- HTTP Method: `GET`
+- Endpoint: `/{lang}/country`
+
+**Parameters**
+
+| Name | Type   | Required | Description   |
+| :--- | :----- | :------- | :------------ |
+| lang | string | ✅       | Language code |
+
+**Return Type**
+
+`object`
+
+**Example Usage Code Snippet**
+
+```csharp
+using NhlStats;
+
+var client = new NhlStatsClient();
+
+var response = await client.Miscellaneous.GetCountryInformationAsync("lang");
+
+Console.WriteLine(response);
+```
+
+## GetShiftChartsAsync
+
+Retrieve shift charts for a specific game.
+
+- HTTP Method: `GET`
+- Endpoint: `/{lang}/shiftcharts`
+
+**Parameters**
+
+| Name       | Type   | Required | Description   |
+| :--------- | :----- | :------- | :------------ |
+| lang       | string | ✅       | Language code |
+| cayenneExp | string | ✅       | Required      |
+
+**Return Type**
+
+`object`
+
+**Example Usage Code Snippet**
+
+```csharp
+using NhlStats;
+
+var client = new NhlStatsClient();
+
+var response = await client.Miscellaneous.GetShiftChartsAsync("lang", "cayenneExp");
+
+Console.WriteLine(response);
+```
+
+## GetGlossaryAsync
+
+Retrieve the glossary for a specific language.
+
+- HTTP Method: `GET`
+- Endpoint: `/{lang}/glossary`
+
+**Parameters**
+
+| Name | Type   | Required | Description   |
+| :--- | :----- | :------- | :------------ |
+| lang | string | ✅       | Language code |
+
+**Return Type**
+
+`object`
+
+**Example Usage Code Snippet**
+
+```csharp
+using NhlStats;
+
+var client = new NhlStatsClient();
+
+var response = await client.Miscellaneous.GetGlossaryAsync("lang");
+
+Console.WriteLine(response);
+```
+
+## GetContentModuleAsync
+
+Retrieve content module information.
+
+- HTTP Method: `GET`
+- Endpoint: `/{lang}/content/module`
+
+**Parameters**
+
+| Name | Type   | Required | Description   |
+| :--- | :----- | :------- | :------------ |
+| lang | string | ✅       | Language code |
+
+**Return Type**
+
+`object`
+
+**Example Usage Code Snippet**
+
+```csharp
+using NhlStats;
+
+var client = new NhlStatsClient();
+
+var response = await client.Miscellaneous.GetContentModuleAsync("lang");
+
+Console.WriteLine(response);
+```
+
+## GetContentModuleMetadataAsync
+
+Retrieve metadata for content modules.
+
+- HTTP Method: `GET`
+- Endpoint: `/content/module/meta`
+
+**Return Type**
+
+`object`
+
+**Example Usage Code Snippet**
+
+```csharp
+using NhlStats;
+
+var client = new NhlStatsClient();
+
+var response = await client.Miscellaneous.GetContentModuleMetadataAsync();
+
+Console.WriteLine(response);
+```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

@@ -1,8 +1,8 @@
 {
   "liblabVersion": "2.3.2",
-  "date": "2024-09-16T17:10:33.713Z",
+  "date": "2024-09-16T19:22:20.642Z",
   "config": {
-    "apiId": 371,
+    "apiId": 1165,
     "baseUrl": "https://api-web.nhle.com/",
     "sdkName": "nhl_stats",
     "sdkVersion": "1.0.0",
@@ -58,7 +58,7 @@
       "httpMethodsToRetry": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"]
     },
     "multiTenant": true,
-    "includeWatermark": false,
+    "includeWatermark": true,
     "packageId": "",
     "githubRepoName": "",
     "ignoreFiles": [],
