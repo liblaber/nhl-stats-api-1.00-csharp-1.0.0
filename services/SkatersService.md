@@ -30,9 +30,9 @@ Retrieve skater leaders for a specific attribute.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Skaters.GetSkaterLeadersAsync("attribute", "lang");
 
@@ -59,9 +59,9 @@ Retrieve skater milestones.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Skaters.GetSkaterMilestonesAsync("lang");
 
@@ -88,9 +88,9 @@ Retrieve skater information.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Skaters.GetSkaterInformationAsync("lang");
 
@@ -128,9 +128,9 @@ Retrieve skater stats for a specific report.
 **Example Usage Code Snippet**
 
 ```csharp
-using NhlStats;
+using NhlStatsClient;
 
-var client = new NhlStatsClient();
+var client = new NhlStatsClientClient();
 
 var response = await client.Skaters.GetSkaterStatsAsync("report", "lang", "cayenneExp", false, true, "factCayenneExp", "include", "exclude", "sort", "dir", 5, 7);
 

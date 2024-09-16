@@ -1,3 +1,3 @@
-cd ./NhlStats
+cd ./NhlStatsClient
 dotnet restore
 dotnet build
