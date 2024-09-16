@@ -2,7 +2,7 @@
 
 using System.Text.Json;
 
-namespace NhlStatsClient.Services;
+namespace NhlStats.Services;
 
 public class BaseService
 {

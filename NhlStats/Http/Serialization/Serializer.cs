@@ -4,7 +4,7 @@ using System.Collections;
 using System.Net;
 using System.Text.Json.Serialization;
 
-namespace NhlStatsClient.Http.Serialization;
+namespace NhlStats.Http.Serialization;
 
 public static class Serializer
 {

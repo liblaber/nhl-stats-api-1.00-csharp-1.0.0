@@ -1,89 +1,19 @@
-# GoaliesService
+# TeamsService
 
-A list of all methods in the `GoaliesService` service. Click on the method name to view detailed information about that method.
+A list of all methods in the `TeamsService` service. Click on the method name to view detailed information about that method.
 
-| Methods                                               | Description                                       |
-| :---------------------------------------------------- | :------------------------------------------------ |
-| [GetGoalieLeadersAsync](#getgoalieleadersasync)       | Retrieve goalie leaders for a specific attribute. |
-| [GetGoalieStatsAsync](#getgoaliestatsasync)           | Retrieve goalie stats for a specific report.      |
-| [GetGoalieMilestonesAsync](#getgoaliemilestonesasync) | Retrieve goalie milestones.                       |
+| Methods                                                       | Description                                |
+| :------------------------------------------------------------ | :----------------------------------------- |
+| [GetTeamInformationAsync](#getteaminformationasync)           | Retrieve list of all teams.                |
+| [GetTeamStatsAsync](#getteamstatsasync)                       | Retrieve team stats for a specific report. |
+| [GetFranchiseInformationAsync](#getfranchiseinformationasync) | Retrieve list of all franchises.           |
 
-## GetGoalieLeadersAsync
+## GetTeamInformationAsync
 
-Retrieve goalie leaders for a specific attribute.
-
-- HTTP Method: `GET`
-- Endpoint: `/{lang}/leaders/goalies/{attribute}`
-
-**Parameters**
-
-| Name      | Type   | Required | Description      |
-| :-------- | :----- | :------- | :--------------- |
-| attribute | string | ✅       | Goalie attribute |
-| lang      | string | ✅       | Language code    |
-
-**Return Type**
-
-`object`
-
-**Example Usage Code Snippet**
-
-```csharp
-using NhlStats;
-
-var client = new NhlStatsClient();
-
-var response = await client.Goalies.GetGoalieLeadersAsync("attribute", "lang");
-
-Console.WriteLine(response);
-```
-
-## GetGoalieStatsAsync
-
-Retrieve goalie stats for a specific report.
+Retrieve list of all teams.
 
 - HTTP Method: `GET`
-- Endpoint: `/{lang}/goalie/{report}`
-
-**Parameters**
-
-| Name           | Type   | Required | Description                                            |
-| :------------- | :----- | :------- | :----------------------------------------------------- |
-| report         | string | ✅       | Goalie report                                          |
-| lang           | string | ✅       | Language code                                          |
-| cayenneExp     | string | ✅       | Required                                               |
-| isAggregate    | bool   | ❌       | Optional                                               |
-| isGame         | bool   | ❌       | Optional                                               |
-| factCayenneExp | string | ❌       | Optional                                               |
-| include        | string | ❌       | Optional                                               |
-| exclude        | string | ❌       | Optional                                               |
-| sort           | string | ❌       | Optional                                               |
-| dir            | string | ❌       | Optional                                               |
-| start          | long   | ❌       | Optional                                               |
-| limit          | long   | ❌       | Optional (Note: a limit of -1 will return all results) |
-
-**Return Type**
-
-`object`
-
-**Example Usage Code Snippet**
-
-```csharp
-using NhlStats;
-
-var client = new NhlStatsClient();
-
-var response = await client.Goalies.GetGoalieStatsAsync("report", "lang", "cayenneExp", false, false, "factCayenneExp", "include", "exclude", "sort", "dir", 6, 7);
-
-Console.WriteLine(response);
-```
-
-## GetGoalieMilestonesAsync
-
-Retrieve goalie milestones.
-
-- HTTP Method: `GET`
-- Endpoint: `/{lang}/milestones/goalies`
+- Endpoint: `/{lang}/team`
 
 **Parameters**
 
@@ -102,7 +32,78 @@ using NhlStats;
 
 var client = new NhlStatsClient();
 
-var response = await client.Goalies.GetGoalieMilestonesAsync("lang");
+var response = await client.Teams.GetTeamInformationAsync("lang");
 
 Console.WriteLine(response);
 ```
+
+## GetTeamStatsAsync
+
+Retrieve team stats for a specific report.
+
+- HTTP Method: `GET`
+- Endpoint: `/{lang}/team/{report}`
+
+**Parameters**
+
+| Name           | Type   | Required | Description                                            |
+| :------------- | :----- | :------- | :----------------------------------------------------- |
+| report         | string | ✅       | Team report                                            |
+| lang           | string | ✅       | Language code                                          |
+| isAggregate    | bool   | ❌       | Optional                                               |
+| isGame         | bool   | ❌       | Optional                                               |
+| factCayenneExp | string | ❌       | Optional                                               |
+| include        | string | ❌       | Optional                                               |
+| exclude        | string | ❌       | Optional                                               |
+| cayenneExp     | string | ❌       | Optional                                               |
+| sort           | string | ❌       | Optional                                               |
+| dir            | string | ❌       | Optional                                               |
+| start          | long   | ❌       | Optional                                               |
+| limit          | long   | ❌       | Optional (Note: a limit of -1 will return all results) |
+
+**Return Type**
+
+`object`
+
+**Example Usage Code Snippet**
+
+```csharp
+using NhlStats;
+
+var client = new NhlStatsClient();
+
+var response = await client.Teams.GetTeamStatsAsync("report", "lang", true, true, "factCayenneExp", "include", "exclude", "cayenneExp", "sort", "dir", 1, 1);
+
+Console.WriteLine(response);
+```
+
+## GetFranchiseInformationAsync
+
+Retrieve list of all franchises.
+
+- HTTP Method: `GET`
+- Endpoint: `/{lang}/franchise`
+
+**Parameters**
+
+| Name | Type   | Required | Description   |
+| :--- | :----- | :------- | :------------ |
+| lang | string | ✅       | Language code |
+
+**Return Type**
+
+`object`
+
+**Example Usage Code Snippet**
+
+```csharp
+using NhlStats;
+
+var client = new NhlStatsClient();
+
+var response = await client.Teams.GetFranchiseInformationAsync("lang");
+
+Console.WriteLine(response);
+```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->
